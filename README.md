@@ -1,9 +1,8 @@
 # TresDet-esp32cam
-
-TredDet is a project for trespaser detection in agricultural feilds.
+### Trespaser detection in agricultural feild
 
 This repository deals with hardware side code to work on the ESP32cam module
 
-Libraries used:
+Libraries used:-
 - CameraWebServer
 - WiFiManager
