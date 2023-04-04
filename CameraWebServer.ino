@@ -1,7 +1,6 @@
 #include "esp_camera.h"
 #include <WiFi.h>
 #include <WiFiManager.h>
-#include <Firebase_ESP_Client.h>
 
 //
 // WARNING!!! PSRAM IC required for UXGA resolution and high JPEG quality
@@ -23,10 +22,6 @@
 
 const char* ssid = "";
 const char* password = "";
-
-//Firebase setup
-String FIREBASE_HOST = "https://tresdet-53552-default-rtdb.firebaseio.com";
-String FIREBASE_AUTH = "1p0ySvTGRugWgMmtBwZ1VzS5UvKoazOF1Sf9X1pS";
 
 void startCameraServer();
 
@@ -99,7 +94,7 @@ void setup() {
   //WiFi.begin(ssid, password);
 
   WiFiManager wm;
-  //wm.resetSettings();
+  wm.resetSettings();
 
   bool res;
     res = wm.autoConnect("TresDet","password");
